@@ -1,0 +1,50 @@
+import java.io.*;
+import java.lang.*;
+import java.util.*;
+  
+class Employee {
+    int salary;
+    String name, address;
+    
+    public Employee(int salary, String name, String address)
+    {
+        this.salary = salary;
+        this.name = name;
+        this.address = address;
+    }
+}
+  
+   
+    
+class SortbySalary implements Comparator<Employee> {
+
+  public int compare(Employee a, Employee b)
+    {
+        return b.salary - a.salary;
+    }
+}
+class Main {
+    public static void main(String[] args)
+    {
+      int x=0,y=0,budget=1000;
+        ArrayList<Employee> ar = new ArrayList<Employee>();
+        ar.add(new Employee(200, "bbbb", "london"));
+        ar.add(new Employee(500, "aaaa", "nyc"));
+        ar.add(new Employee(700, "cccc", "jaipur"));
+  
+        Collections.sort(ar, new SortbySalary());
+         Iterator itr=ar.iterator();  
+         while(itr.hasNext()){  
+            Employee st=(Employee)itr.next();
+            y=x;
+            x=x+st.salary;
+            if(x>budget){
+             x=y;
+           }
+           else{
+            System.out.println(st.salary+" "+st.name);  
+}  }
+  
+       
+    }
+}
