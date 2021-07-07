@@ -1,0 +1,17 @@
+a.) The start will be by asking if he is an existing customer or a new user.
+
+    i.) If it is a new customer, we will add customer of which we will store 
+        Customer Name,Create a Customer account Number,Customer Deposits.
+        The Customers will be added dynamically using the List and each element in the list would contain 
+        his details which were mentioned above.
+
+   ii.) If it is a existing customer we will be availing him to get the following facilities. 
+
+b.) The existing Customer will be asked whether he want to do any transaction or will just check the account details.
+
+c.) To access the Account details we will be using his account number.
+
+d.) For Money Withdrawl we will be using a class which will update the money in the account after each transaction.
+
+e.) Giving Account Statement after every withdrawl or deposit.
+
